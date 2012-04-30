@@ -21,16 +21,16 @@ public class ExpenseReport {
 
         switch (expense.type) {
             case DINNER:
-            appendExpense("Dinner",expense.amount);
+            appendExpenseToReport("Dinner",expense.amount);
             break;
             case BREAKFAST:
-            appendExpense("Breakfast",expense.amount);
+            appendExpenseToReport("Breakfast",expense.amount);
             break;
             case CAR_RENTAL:
-            appendExpense("Car Rental",expense.amount);
+            appendExpenseToReport("Car Rental",expense.amount);
             break;
             default:
-            appendExpense("TILT",0);
+            appendExpenseToReport("TILT",0);
             break;
         }
 
@@ -51,7 +51,7 @@ public class ExpenseReport {
     return "9/12/2002";
   }
 
-  private void appendExpense(String expenseType, int expenseAmount) {
+  private void appendExpenseToReport(String expenseType, int expenseAmount) {
 
     if (expenseType == "Dinner" || expenseType == "Breakfast") mealExpenses += expenseAmount;
 
