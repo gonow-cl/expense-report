@@ -52,10 +52,14 @@ public class ExpenseReport {
   }
 
   private void appendExpense(String expenseType, int expenseAmount) {
-    mealExpenses = (expenseType == "Dinner" || expenseType == "Breakfast") ? mealExpenses+expenseAmount : mealExpenses;
+
+    if (expenseType == "Dinner" || expenseType == "Breakfast") mealExpenses += expenseAmount;
+
     reportOutPut += ((expenseType == "Dinner" && expenseAmount > 5000) || (expenseType == "Breakfast" && expenseAmount > 1000)) ? "X" : " ";
     reportOutPut += "\t"+expenseType+"\t$"+expenseAmount/100.0+"\n";
+
     totalExpenses += expenseAmount;
+
   }
 
 }
