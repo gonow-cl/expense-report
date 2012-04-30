@@ -44,18 +44,7 @@ public class ExpenseReport {
     reportOutPut += "\nMeal expenses $" + mealExpenses/100.0;
     reportOutPut += "\nTotal $" + totalExpenses/100.0;
 
-        /*
-        printer.print(String.format("%s\t%s\t$%.02f\n",
-        (  (expense.type == DINNER && expense.amount > 5000)
-        || (expense.type == BREAKFAST && expense.amount > 1000)) ? "X" : " ",
-        name, expense.amount / 100.0));
-
-
-
-    printer.print(String.format("\nMeal expenses $%.02f",mealExpenses / 100.0 ));
-    printer.print(String.format("\nTotal $%.02f", total / 100.0));  */
-
-     printer.print(reportOutPut);
+    printer.print(reportOutPut);
 
   }
 
