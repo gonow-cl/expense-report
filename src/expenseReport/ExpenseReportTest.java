@@ -23,8 +23,8 @@ public class ExpenseReportTest {
     assertEquals(
       "Expenses 9/12/2002\n" +
         "\n" +
-        "Meal expenses $0.00\n" +
-        "Total $0.00",
+        "Meal expenses $0,00\n" +
+        "Total $0,00",
       printer.getText());
   }
 
@@ -35,10 +35,10 @@ public class ExpenseReportTest {
 
     assertEquals(
       "Expenses 9/12/2002\n" +
-        " \tDinner\t$16.78\n" +
+        " \tDinner\t$16,78\n" +
         "\n" +
-        "Meal expenses $16.78\n" +
-        "Total $16.78",
+        "Meal expenses $16,78\n" +
+        "Total $16,78",
       printer.getText());
   }
 
@@ -50,12 +50,12 @@ public class ExpenseReportTest {
 
     assertEquals(
       "Expenses 9/12/2002\n" +
-        " \tDinner\t$10.00\n" +
-        " \tBreakfast\t$5.00\n" +
+        " \tDinner\t$10,00\n" +
+        " \tBreakfast\t$5,00\n" +
 
         "\n" +
-        "Meal expenses $15.00\n" +
-        "Total $15.00",
+        "Meal expenses $15,00\n" +
+        "Total $15,00",
       printer.getText());
   }
 
@@ -68,12 +68,12 @@ public class ExpenseReportTest {
 
     assertEquals(
       "Expenses 9/12/2002\n" +
-        " \tDinner\t$10.00\n" +
-        " \tBreakfast\t$5.00\n" +
-        " \tCar Rental\t$500.00\n" +
+        " \tDinner\t$10,00\n" +
+        " \tBreakfast\t$5,00\n" +
+        " \tCar Rental\t$500,00\n" +
         "\n" +
-        "Meal expenses $15.00\n" +
-        "Total $515.00",
+        "Meal expenses $15,00\n" +
+        "Total $515,00",
       printer.getText());
   }
 
@@ -87,13 +87,13 @@ public class ExpenseReportTest {
 
     assertEquals(
       "Expenses 9/12/2002\n" +
-        " \tBreakfast\t$10.00\n" +
-        "X\tBreakfast\t$10.01\n" +
-        " \tDinner\t$50.00\n" +
-        "X\tDinner\t$50.01\n" +
+        " \tBreakfast\t$10,00\n" +
+        "X\tBreakfast\t$10,01\n" +
+        " \tDinner\t$50,00\n" +
+        "X\tDinner\t$50,01\n" +
         "\n" +
-        "Meal expenses $120.02\n" +
-        "Total $120.02",
+        "Meal expenses $120,02\n" +
+        "Total $120,02",
       printer.getText());
   }
 
