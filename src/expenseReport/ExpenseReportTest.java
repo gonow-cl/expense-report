@@ -23,8 +23,8 @@ public class ExpenseReportTest {
     assertEquals(
       "Expenses 9/12/2002\n" +
         "\n" +
-        "Meal expenses $0.00\n" +
-        "Total $0.00",
+        "Meal expenses $0.0\n" +
+        "Total $0.0",
       printer.getText());
   }
 
@@ -50,12 +50,12 @@ public class ExpenseReportTest {
 
     assertEquals(
       "Expenses 9/12/2002\n" +
-        " \tDinner\t$10.00\n" +
-        " \tBreakfast\t$5.00\n" +
+        " \tDinner\t$10.0\n" +
+        " \tBreakfast\t$5.0\n" +
 
         "\n" +
-        "Meal expenses $15.00\n" +
-        "Total $15.00",
+        "Meal expenses $15.0\n" +
+        "Total $15.0",
       printer.getText());
   }
 
@@ -68,12 +68,12 @@ public class ExpenseReportTest {
 
     assertEquals(
       "Expenses 9/12/2002\n" +
-        " \tDinner\t$10.00\n" +
-        " \tBreakfast\t$5.00\n" +
-        " \tCar Rental\t$500.00\n" +
+        " \tDinner\t$10.0\n" +
+        " \tBreakfast\t$5.0\n" +
+        " \tCar Rental\t$500.0\n" +
         "\n" +
-        "Meal expenses $15.00\n" +
-        "Total $515.00",
+        "Meal expenses $15.0\n" +
+        "Total $515.0",
       printer.getText());
   }
 
@@ -87,9 +87,9 @@ public class ExpenseReportTest {
 
     assertEquals(
       "Expenses 9/12/2002\n" +
-        " \tBreakfast\t$10.00\n" +
+        " \tBreakfast\t$10.0\n" +
         "X\tBreakfast\t$10.01\n" +
-        " \tDinner\t$50.00\n" +
+        " \tDinner\t$50.0\n" +
         "X\tDinner\t$50.01\n" +
         "\n" +
         "Meal expenses $120.02\n" +

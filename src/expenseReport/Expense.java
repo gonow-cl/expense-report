@@ -1,6 +1,7 @@
 package expenseReport;
 
 public class Expense {
+
   public enum Type {DINNER, BREAKFAST, CAR_RENTAL};
   public Type type;
   public int amount;
