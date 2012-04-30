@@ -1,4 +1,4 @@
-package expenseReport;
+package expense;
 
 public class Expense {
   public enum Type {DINNER, BREAKFAST, CAR_RENTAL};
