@@ -1,5 +1,13 @@
-*.ipr
-*.iws
+*.class
+*.jar
+target
+
+.classpath
+.project
+.settings
+*.log
 *.iml
-.idea
+*.iws
+*.ids
+*.ipr
 
