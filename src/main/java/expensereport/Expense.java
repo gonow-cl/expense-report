@@ -2,9 +2,32 @@ package expensereport;
 
 public class Expense {
 
-    public enum Type {DINNER, BREAKFAST, CAR_RENTAL};
+    public enum Type {
+
+        DINNER {
+            @Override
+            public String toString() {
+                return "Dinner";
+            }
+        },
+
+        BREAKFAST {
+            @Override
+            public String toString() {
+                return "Breakfast";
+            }
+        },
+
+        CAR_RENTAL {
+            @Override
+            public String toString() {
+                return "Car Rental";
+            }
+        }
+    }
 
     private Type type;
+
     private int amount;
 
     public Expense(Type type, int amount) {
@@ -16,15 +39,8 @@ public class Expense {
         return type;
     }
 
-    public void setType(Type type) {
-        this.type = type;
-    }
-
     public int getAmount() {
         return amount;
     }
 
-    public void setAmount(int amount) {
-        this.amount = amount;
-    }
 }

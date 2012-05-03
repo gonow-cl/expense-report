@@ -19,21 +19,11 @@ public class ExpenseReport {
 
         for (Expense expense : expenses) {
 
-            if (expense.getType() == BREAKFAST || expense.getType() == DINNER)
+            if (expense.getType() == BREAKFAST || expense.getType() == DINNER) {
                 mealExpenses += expense.getAmount();
-
-            String name = "TILT";
-            switch (expense.getType()) {
-                case DINNER:
-                    name = "Dinner";
-                    break;
-                case BREAKFAST:
-                    name = "Breakfast";
-                    break;
-                case CAR_RENTAL:
-                    name = "Car Rental";
-                    break;
             }
+
+            String name = expense.getType().toString();
 
             printer.print(String.format("%s\t%s\t$%.02f\n",
                     ((expense.getType() == DINNER && expense.getAmount() > 5000)
