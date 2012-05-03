@@ -10,10 +10,12 @@ public class ExpenseReportTest {
 
     private ExpenseReport report = new ExpenseReport();
     private MockReportPrinter printer = new MockReportPrinter();
+    private String date;
 
     @Before
     public void setUp() {
-        report = new ExpenseReport();
+        date = "9/12/2002";
+        report = new ExpenseReport(date);
         printer = new MockReportPrinter();
     }
 
@@ -22,7 +24,7 @@ public class ExpenseReportTest {
         report.printReport(printer);
 
         assertEquals(
-                "Expenses 9/12/2002\n" +
+                "Expenses "+date+"\n" +
                         "\n" +
                         "Meal expenses $0.00\n" +
                         "Total $0.00",
@@ -35,7 +37,7 @@ public class ExpenseReportTest {
         report.printReport(printer);
 
         assertEquals(
-                "Expenses 9/12/2002\n" +
+                "Expenses "+date+"\n" +
                         " \tDinner\t$16.78\n" +
                         "\n" +
                         "Meal expenses $16.78\n" +
@@ -50,7 +52,7 @@ public class ExpenseReportTest {
         report.printReport(printer);
 
         assertEquals(
-                "Expenses 9/12/2002\n" +
+                "Expenses "+date+"\n" +
                         " \tDinner\t$10.00\n" +
                         " \tBreakfast\t$5.00\n" +
 
@@ -68,7 +70,7 @@ public class ExpenseReportTest {
         report.printReport(printer);
 
         assertEquals(
-                "Expenses 9/12/2002\n" +
+                "Expenses "+date+"\n" +
                         " \tDinner\t$10.00\n" +
                         " \tBreakfast\t$5.00\n" +
                         " \tCar Rental\t$500.00\n" +
@@ -87,7 +89,7 @@ public class ExpenseReportTest {
         report.printReport(printer);
 
         assertEquals(
-                "Expenses 9/12/2002\n" +
+                "Expenses "+date+"\n" +
                         " \tBreakfast\t$10.00\n" +
                         "X\tBreakfast\t$10.01\n" +
                         " \tDinner\t$50.00\n" +
