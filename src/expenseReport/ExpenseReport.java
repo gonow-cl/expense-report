@@ -3,8 +3,6 @@ package expenseReport;
 import java.util.ArrayList;
 import java.util.List;
 
-import static expenseReport.Expense.Type.*;
-
 
 public class ExpenseReport {
 
@@ -19,15 +17,15 @@ public class ExpenseReport {
 
     for (Expense expense : expenses) {
 
-        switch (expense.type) {
+        switch (expense.getType()) {
             case DINNER:
-            appendExpenseToReport("Dinner",expense.amount);
+            appendExpenseToReport("Dinner", expense.getAmount());
             break;
             case BREAKFAST:
-            appendExpenseToReport("Breakfast",expense.amount);
+            appendExpenseToReport("Breakfast", expense.getAmount());
             break;
             case CAR_RENTAL:
-            appendExpenseToReport("Car Rental",expense.amount);
+            appendExpenseToReport("Car Rental", expense.getAmount());
             break;
             default:
             appendExpenseToReport("TILT",0);
@@ -53,9 +51,12 @@ public class ExpenseReport {
 
   private void appendExpenseToReport(String expenseType, int expenseAmount) {
 
-    if (expenseType == "Dinner" || expenseType == "Breakfast") mealExpenses += expenseAmount;
+    if ("Breakfast".equals(expenseType) || "Dinner".equals(expenseType)) mealExpenses += expenseAmount;
 
-    reportOutPut += ((expenseType == "Dinner" && expenseAmount > 5000) || (expenseType == "Breakfast" && expenseAmount > 1000)) ? "X" : " ";
+      reportOutPut += (
+              expenseType == "Dinner" && expenseAmount > 5000 ||    // too expensive dinner
+              expenseType == "Breakfast" && expenseAmount > 1000    // too expensive breakfast
+        ) ? "X" : " ";
     reportOutPut += "\t"+expenseType+"\t$"+expenseAmount/100.0+"\n";
 
     totalExpenses += expenseAmount;
